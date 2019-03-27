@@ -10,23 +10,25 @@ $(document).ready(function() {
             else {
                 $(this).append("O");
 			}
-            turno++;
-		}
+			turno++;
+			if (checarVencedor() != -1 && checarVencedor() != "") {
+				gameOver = true;
 
-		if (checarVencedor() != -1 && checarVencedor() != "") {
-			if (checarVencedor() == "X") {
-				alert("Jogador X venceu!");
+				if (checarVencedor() == "X") {
+					alert("Jogador X venceu!");
+				}
+				else {
+					alert("Jogador O venceu!");
+				}
 			}
 			else {
-				alert("Jogador O venceu!");
+				if(turno >= 10) {
+					gameOver = true;
+					alert("Deu velha!");
+				}
 			}
 		}
-		else {
-			if(turno >= 10) {
-				alert("Deu velha!");
-			}
-		}
-    });
+	});
 
     function checarVencedor() {
 		//Pega os textos em cada espaço da tabela
