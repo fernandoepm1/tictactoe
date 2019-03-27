@@ -3,8 +3,11 @@
     <head>
 		<title>Tic-Tac-Toe</title>
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<link type="text/css" rel="stylesheet" href="css\board.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css\board.css"/>
+
+        <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js\gameplay.js"></script>
     </head>
 
     <body>
@@ -26,5 +29,8 @@
                 <td id="square9"></td>
             </tr>
         </table>
+        <div id="button" class="text-center">
+            <button type="button" id="resetBtn" class="btn btn-dark">Reset</button>
+        </div>
     </body>
 </html>
